@@ -1,17 +1,16 @@
 import './App.css';
-// import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles/main.css'
-import Modal from './components/Modal';
-import { useState, useContext, useEffect } from 'react';
 
+import { useState, useContext, useEffect } from 'react';
 import { CartContext } from './CartContext';
 import mealService from './services/food'
 
+import Modal from './components/Modal/Modal';
 import Header from './components/Header';
 import Cart from './components/Cart';
 import Title from './components/Title';
 import About from './components/About';
-import MealList from './components/MealList';
+import MealList from './components/MealsDisplay/MealList';
 
 const App = () => {
   const [modal, setModal] = useState(false)
