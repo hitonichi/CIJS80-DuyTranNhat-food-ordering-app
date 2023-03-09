@@ -1,0 +1,34 @@
+{
+  "meals": [
+    {
+      "id": "m1",
+      "name": "Sushi",
+      "description": "Finest fish and veggies",
+      "price": 22.99,
+      "image": "https://i-dulich.vnecdn.net/2021/09/02/5-1630568765-1630568775-4403-1630568961_680x0.jpg"
+    },
+    {
+      "id": "m3",
+      "name": "Barbecue Burger",
+      "description": "American, raw, meaty",
+      "price": 12.99,
+      "image": "http://loremflickr.com/640/480/"
+    },
+    {
+      "id": "m4",
+      "name": "Green Bowl",
+      "description": "Healthy...and green...",
+      "price": 18.9,
+      "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/7/21/1/HE_Green-Smoothie-Bowl.jpg.rend.hgtvcom.616.462.suffix/1437508213013.jpeg"
+    },
+    {
+      "name": "hello",
+      "price": "311.005",
+      "description": "The beautiful range of Apple Naturalé that has an The beautiful range of Apple Naturalé that has an ",
+      "image": "http://loremflickr.com/640/480/food",
+      "id": "NaN",
+      "age": 30
+    }
+  ],
+  "order": []
+}

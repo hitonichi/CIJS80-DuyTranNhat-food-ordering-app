@@ -1,0 +1,16 @@
+.header {
+    position: sticky;
+    top: 0;
+    height: 4em;
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.title {
+    font-weight: bold;
+    font-size: x-large;
+    color: rgb(238, 219, 142);
+}

@@ -1,0 +1,193 @@
+.App {
+  text-align: center;
+}
+
+:root {
+  --bs-secondary: #F1A661;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.modal-open-btn, .modal-close-btn {
+  border: none;
+  padding: 0.8em;
+  background-color: bisque;
+  border-radius: 1em;
+  font-weight: bold;
+}
+
+.modal-open-btn:hover, .modal-close-btn:hover {
+  border: none;
+  padding: 0.8em;
+  background-color: rgb(184, 83, 46);
+  color: aliceblue;
+}
+
+.content-container, .about, .meals-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.content-container {
+  background-color: blanchedalmond;
+}
+
+.about {
+  width: 45%;
+  background-color: gainsboro;
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 0 0 1em gray;
+  margin: 2em;
+}
+
+.meals-container {
+  width: 50%;
+  background-color: antiquewhite;
+  border-radius: 1em;
+  padding: 1em;
+  box-shadow: 0 0 1em gray;
+  margin: 2em;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.active-modal {
+  overflow-y: hidden;
+}
+
+.Modal, .Modal-overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.Modal-overlay {
+  background: rgba(49,49,49,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Modal-content {
+  position: relative;
+  width: 40%;
+  max-width: 600px;
+  min-width: 200px;
+  height: fit-content;
+  max-height: 80vh;
+  border-radius: 1em;
+  padding: 1em;
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.cart-meal-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-meal-info {
+  width: auto;
+}
+
+.meal-price-n-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hori {
+  display: flex;
+  gap: .3em;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .meals-container, .about {
+    width: 90%;
+    margin: 1em;
+  }
+
+  .addToCart-btn {
+    width: 100%;
+  }
+
+  .Modal-content {
+    width: 90%;
+  }
+}
+
+.meal-container {
+  /* d-flex align-items-center justify-content-between */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* height: 100%;
+  width: 100%; */
+}
+
+.meal-img {
+  width: 25%;
+  aspect-ratio: 6/5;
+  object-fit: cover;
+  border-radius: 1em;
+}
+
+.meal-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em;
+  /* flex: 1 1 1; */
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.total-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 0.5em;
+}
+
+.input-is-invalid {
+  background-color: red;
+  color: white;
+}
