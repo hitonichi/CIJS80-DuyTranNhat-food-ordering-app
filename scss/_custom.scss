@@ -2,6 +2,49 @@ $primary: #E38B29;
 $secondary: #F1A661;
 $danger: #850000;
 
+$tint: #FFD8A9;
+$moreTint: #FDEEDC;
 // import bootstrap
+
 @import '../node_modules/bootstrap/scss/bootstrap';
 
+.header {
+    background-color: $primary;
+}
+
+.title {
+    color: $tint;
+}
+
+.content-container {
+    background-color: $tint;
+}
+
+.meals-container, .about {
+    background-color: $moreTint;
+}
+
+.total-price, .meal-name {
+    color: $danger;
+}
+
+.meal-name, .meal-price {
+    font-size: $font-size-base * 1.75;
+    font-weight: bold;
+}
+
+.meal-price {
+    color: $primary;
+}
+
+.cart-btn {
+    background-color: $tint;
+}
+
+.cart-btn:hover {
+    background-color: $moreTint;
+}
+
+.divider {
+    border: 1px solid $danger;
+}

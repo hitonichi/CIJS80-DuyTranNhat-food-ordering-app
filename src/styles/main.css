@@ -10769,5 +10769,45 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.header {
+  background-color: #E38B29;
+}
+
+.title {
+  color: #FFD8A9;
+}
+
+.content-container {
+  background-color: #FFD8A9;
+}
+
+.meals-container, .about {
+  background-color: #FDEEDC;
+}
+
+.total-price, .meal-name {
+  color: #850000;
+}
+
+.meal-name, .meal-price {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.meal-price {
+  color: #E38B29;
+}
+
+.cart-btn {
+  background-color: #FFD8A9;
+}
+
+.cart-btn:hover {
+  background-color: #FDEEDC;
+}
+
+.divider {
+  border: 1px solid #850000;
+}
 
 /*# sourceMappingURL=main.css.map */

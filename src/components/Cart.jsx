@@ -11,7 +11,7 @@ const Cart = ({
 
     return (
         <div className="cart-container">
-            <div className="btn btn-primary d-flex rounded-pill gap-2 fw-bold text-light" onClick={toggleModal}>
+            <div className=" btn d-flex rounded-pill gap-2 fw-bold text-primary cart-btn" onClick={toggleModal}>
                 <div 
                     className=""
                 >Open Cart</div>

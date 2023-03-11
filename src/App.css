@@ -10,7 +10,6 @@ body::-webkit-scrollbar {
   position: sticky;
   top: 0;
   height: 4em;
-  background-color: coral;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,7 +19,6 @@ body::-webkit-scrollbar {
 .title {
   font-weight: bold;
   font-size: x-large;
-  color: rgb(238, 219, 142);
 }
 
 .App-header {
@@ -71,6 +69,7 @@ body::-webkit-scrollbar {
   border-radius: 1em;
   box-shadow: 0 0 1em gray;
   margin: 2em;
+  margin-bottom: 0em;
 }
 
 .meals-container {
@@ -98,6 +97,8 @@ body::-webkit-scrollbar {
   top: 0;
   left: 0;
   position: fixed;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
 }
 
 .Modal-overlay {

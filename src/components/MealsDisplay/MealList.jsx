@@ -1,5 +1,4 @@
 import Meal from "./Meal"
-import Stack from 'react-bootstrap/Stack'
 
 const MealList = ({
     meals,
@@ -7,11 +6,15 @@ const MealList = ({
 }) => {
     return (
         <div className="meals-container">
-            <Stack gap={4}>
-                {meals.map(meal => (
-                    <Meal key={meal.id} meal={meal} handleAddMeal={handleAddMeal}></Meal>
+            <div className="d-flex flex-column">
+                {meals.map((meal, id) => (
+                    <div className="d-flex flex-column">
+                        <Meal key={meal.id} meal={meal} handleAddMeal={handleAddMeal}></Meal>
+                        {id !== meals.length - 1 && (<hr className="divider"></hr>)}
+                    </div>
+                    
                 ))}
-            </Stack>
+            </div>
         </div>
     )
 }
