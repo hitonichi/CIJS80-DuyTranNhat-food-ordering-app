@@ -1,5 +1,3 @@
-import "../styles/Header.css"
-
 const Header = (props) => {
     return (
         <div className="header">
