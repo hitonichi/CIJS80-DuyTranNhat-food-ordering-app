@@ -10810,4 +10810,8 @@ textarea.form-control-lg {
   border: 1px solid #850000;
 }
 
+.meals-container, .about {
+  box-shadow: 0 0 1em #F1A661;
+}
+
 /*# sourceMappingURL=main.css.map */

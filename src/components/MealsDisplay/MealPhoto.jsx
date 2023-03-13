@@ -2,7 +2,7 @@ const MealPhoto = ({
     image
 }) => {
     return (
-        <img src={image} alt="Meal" className="meal-img" />
+        <img src={image} alt="Meal" className="meal-img"/>
     )
 }
 

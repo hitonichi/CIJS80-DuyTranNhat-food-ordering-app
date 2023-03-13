@@ -1,9 +1,6 @@
-import {useForm} from 'react-hook-form'
-
-import FoodServices from '../../services/food'
-import React, {useContext, useState} from 'react';
-import { CartContext } from '../../CartContext';
-import ModalItem from './ModalItem';
+import React from 'react';
+import { useCart, useCartDispatch } from '../../CartContext';
+import CartItem from './CartItem';
 import Total from './Total';
 import OrderOptions from './OrderOptions';
 import ModalWrapper from './ModalWrapper';
@@ -14,18 +11,21 @@ const Modal = ({
     isOrdered,
     setOrdered
 }) => {
-    const {cart, setCart} = useContext(CartContext)
+    const cart = useCart()
+    const dispatch = useCartDispatch()
 
+    const tol = cart.length
+        ? cart.reduce(
+            (prev, cur) => prev + cur.price * cur.quantity,
+            0).toFixed(2)
+        : 0
     
-    const changeQuantity = (id, diff) => {
-        const newCart = [...cart]
-        const mealIdx = newCart.findIndex(m => m.id === id)
-        if (newCart[mealIdx].quantity === 1 && diff === -1) {
-            newCart.splice(mealIdx, 1)
-        } else {
-            newCart[mealIdx].quantity += diff
-        }
-        setCart(newCart)
+    const changeQuantity = (id, amount) => {
+        dispatch({
+            type: "changeQuantity",
+            id,
+            amount
+        })
     }
 
     if (isOrdered) {
@@ -41,14 +41,14 @@ const Modal = ({
             <div className="modal-meal-list">
                 {cart.map(meal => {
                     return (
-                        <div>
-                            <ModalItem key={meal.id} meal={meal} changeQuantity={changeQuantity}></ModalItem>
+                        <div key={meal.id}>
+                            <CartItem meal={meal} changeQuantity={changeQuantity}></CartItem>
                             <hr className='border border-danger border-1'></hr>
                         </div>
                     )
                 })}
             </div>
-            <Total cart={cart}></Total>
+            <Total tol={tol}></Total>
             <OrderOptions toggleModal={toggleModal} setOrdered={setOrdered}></OrderOptions>
         </ModalWrapper>
     )

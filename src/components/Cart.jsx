@@ -1,21 +1,18 @@
-import { useContext } from "react"
-import { CartContext } from "../CartContext"
+import { useCart } from "../CartContext"
 
 const Cart = ({
-    toggleModal,
+    toggleModal
 }) => {
-    const {cart} = useContext(CartContext)
-
-    const quantity = cart.reduce((prev, cur) => 
-        prev += cur.quantity, 0)
+    const cart = useCart()
+    const tol = cart.reduce((cum, cur) => cum + Number(cur.quantity), 0)
 
     return (
         <div className="cart-container">
             <div className=" btn d-flex rounded-pill gap-2 fw-bold text-primary cart-btn" onClick={toggleModal}>
                 <div 
                     className=""
-                >Open Cart</div>
-                <div className="bg-danger rounded-circle px-2">{quantity}</div>
+                >Your Cart</div>
+                <div className="bg-danger rounded-circle px-2">{tol}</div>
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
-import { CartContext } from '../../CartContext'
+import { useCart, useCartDispatch } from '../../CartContext'
 import FoodServices from '../../services/food'
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 const OrderOptions = ({
@@ -9,7 +9,8 @@ const OrderOptions = ({
 }) => {
     const [isOrdering, setOrdering] = useState(false)
     
-    const {cart, setCart} = useContext(CartContext)
+    const cart = useCart()
+    const dispatch = useCartDispatch()
     const {register, handleSubmit, formState: {errors}, reset} = useForm()
 
     const openOrder = () => {
@@ -20,13 +21,27 @@ const OrderOptions = ({
         setOrdering(!isOrdering)
     }
 
+    const resetMealCnt = async () => {
+        const inputs = Array.from(document.getElementsByClassName('meal-amount-cnt'))
+        inputs.forEach(input => {
+            input.value = 1
+        });
+    }
+
     const onSubmit = data => {
         FoodServices
             .create(data)
-            .then((response) => {
-                console.log(response);
+            .then((res) => {
+                // console.log(res);
+                resetMealCnt()
                 setOrdered(true)
-                setCart([])
+                dispatch({
+                    type: "clear"
+                })
+            })
+            .catch(e => {
+                alert('Your order cannot be processed right now. Please try again later.')
+                // console.log(e);
             })
     }
     

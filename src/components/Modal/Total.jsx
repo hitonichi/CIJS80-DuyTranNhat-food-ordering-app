@@ -1,11 +1,6 @@
 const Total = ({
-    cart
+    tol
 }) => {
-    const tol = cart.length
-        ? cart.reduce(
-            (prev, cur) => prev + cur.price * cur.quantity,
-            0).toFixed(2)
-        : 0
     return (
         <div className="total-price">
             <div>

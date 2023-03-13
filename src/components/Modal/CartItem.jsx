@@ -1,4 +1,4 @@
-const ModalItem = ({
+const CartItem = ({
     meal,
     changeQuantity
 }) => {
@@ -19,4 +19,4 @@ const ModalItem = ({
     )
 }
 
-export default ModalItem
+export default CartItem

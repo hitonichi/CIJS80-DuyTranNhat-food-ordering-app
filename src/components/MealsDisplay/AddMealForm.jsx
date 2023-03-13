@@ -10,7 +10,7 @@ const AddMealForm = ({
                         <label htmlFor="amount">Amount:</label>
                     </div>
                     <div className="col-md-3 ">
-                        <input style={{width: "100%"}} type="number" min={1} id="amount" defaultValue={1} className="rounded border-secondary"></input>
+                        <input style={{width: "100%"}} type="number" min={1} id="amount" defaultValue={1} className="rounded border-secondary meal-amount-cnt"></input>
                     </div>
                 </div>
                 <div className="d-flex justify-content-end mt-2">

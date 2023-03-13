@@ -7,8 +7,9 @@ const getAll = async () => {
 }
 
 const create = async (newObj) => {
-    const req = await axios.post(`${baseUrl}/orders`, newObj)
-    return req.data
+    const res = await axios
+        .post(`${baseUrl}/orders`, newObj)
+    return res
 }
 
 export default {getAll, create}

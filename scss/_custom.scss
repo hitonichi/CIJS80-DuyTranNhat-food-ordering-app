@@ -10,6 +10,7 @@ $moreTint: #FDEEDC;
 
 .header {
     background-color: $primary;
+    // z-index: 999;
 }
 
 .title {
@@ -47,4 +48,9 @@ $moreTint: #FDEEDC;
 
 .divider {
     border: 1px solid $danger;
+    z-index: 0;
+}
+
+.meals-container, .about {
+    box-shadow: 0 0 1em $secondary;
 }
