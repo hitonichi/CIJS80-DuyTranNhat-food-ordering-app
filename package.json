@@ -27,7 +27,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server -p3001 --watch db.json",
-    "compile:sass": "sass --watch scss:src/styles"
+    "compile:sass": "sass --watch scss:src/styles",
+    "all": "npm run server && npm compile:sass && npm start"
   },
   "eslintConfig": {
     "extends": [

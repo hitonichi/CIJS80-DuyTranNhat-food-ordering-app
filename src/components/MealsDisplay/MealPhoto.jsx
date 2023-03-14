@@ -2,7 +2,9 @@ const MealPhoto = ({
     image
 }) => {
     return (
-        <img src={image} alt="Meal" className="meal-img"/>
+        // <div className="meal-img-container">
+            <img src={image} alt="Meal" className="meal-img"/>
+        // </div>
     )
 }
 

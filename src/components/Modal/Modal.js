@@ -20,7 +20,17 @@ const Modal = ({
             0).toFixed(2)
         : 0
     
+    const animateCart = () => {
+        const cartBtn = document.getElementById('cart-btn')
+        cartBtn.classList.toggle('cart-btn-animate')
+        setTimeout(() => {
+            cartBtn.classList.toggle('cart-btn-animate')
+        }, 130);
+    }
+
     const changeQuantity = (id, amount) => {
+        animateCart()
+        
         dispatch({
             type: "changeQuantity",
             id,
@@ -31,8 +41,8 @@ const Modal = ({
     if (isOrdered) {
         return (
             <ModalWrapper modal={modal}>
-                <div>Order complete</div>
-                <button className="modal-close-btn" onClick={toggleModal}>Close</button>
+                <div>Order complete.</div>
+                <button className="btn btn-primary rounded-pill mt-2" onClick={toggleModal}>Close</button>
             </ModalWrapper>
         )
     }
@@ -43,7 +53,7 @@ const Modal = ({
                     return (
                         <div key={meal.id}>
                             <CartItem meal={meal} changeQuantity={changeQuantity}></CartItem>
-                            <hr className='border border-danger border-1'></hr>
+                            <hr className='divider'></hr>
                         </div>
                     )
                 })}

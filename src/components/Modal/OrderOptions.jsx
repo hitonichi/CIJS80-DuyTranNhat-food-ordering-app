@@ -2,6 +2,7 @@ import { useCart, useCartDispatch } from '../../CartContext'
 import FoodServices from '../../services/food'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import OrderInput from './OrderInput'
 
 const OrderOptions = ({
     toggleModal,
@@ -50,25 +51,33 @@ const OrderOptions = ({
             <div className='order-form'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='d-flex flex-column'>
-                        <label className='fw-bold' htmlFor='name'>Your Name</label>
-                        <input className={errors.name ? 'bg-danger' : ''} {...register("name", {required: true})}></input>
-                        {errors?.name && <span>Please input a valid name!</span>}
+                        <OrderInput
+                            type="name"
+                            error={errors.name}    
+                            register={register}
+                        ></OrderInput>
 
-                        <label className='fw-bold' htmlFor='street'>Street</label>
-                        <input className={errors.street ? 'bg-danger' : ''} {...register("street", {required: true})}></input>
-                        {errors?.street && <span>Please input a valid street!</span>}
+                        <OrderInput
+                            type="street"
+                            error={errors.street}    
+                            register={register}
+                        ></OrderInput>
                         
-                        <label className='fw-bold' htmlFor='postal'>Postal Code</label>
-                        <input className={errors.postal ? 'bg-danger' : ''} {...register("postal", {required: true, pattern: /[0-9]{5}/, max: 99999})}></input>
-                        {errors?.postal && <span>Please input a valid postal code (5 digits long)!</span>}
+                        <OrderInput
+                            type="postal"
+                            error={errors.postal}    
+                            register={register}
+                        ></OrderInput>
 
-                        <label className='fw-bold' htmlFor='city'>City</label>
-                        <input className={errors.city ? 'bg-danger' : ''} {...register("city", {required: true})}></input>
-                        {errors?.city && <span>Please input a valid city!</span>}
+                        <OrderInput
+                            type="city"
+                            error={errors.city}    
+                            register={register}
+                        ></OrderInput>
 
-                        <div className='d-flex mt-2'>
+                        <div className='order-nav mt-2'>
                             <button
-                                className='btn btn-primary rounded-pill fw-bold text-light'
+                                className='btn btn-outline-primary rounded-pill fw-bold'
                                 onClick={() => {
                                     reset()
                                     setOrdering(!isOrdering)
@@ -87,9 +96,9 @@ const OrderOptions = ({
         )
     }
     return (
-        <div>
-            <button className="btn btn-primary rounded-pill fw-bold text-light" onClick={toggleModal}>Close</button>
-            <button className='btn btn-primary rounded-pill fw-bold text-light' onClick={() => openOrder()}>Order</button>
+        <div className='order-nav'>
+            <button className="btn btn-outline-primary rounded-pill" onClick={toggleModal}>Close</button>
+            <button className='btn btn-primary rounded-pill text-light' onClick={() => openOrder()}>Order</button>
         </div>
     )
 }

@@ -8,11 +8,11 @@ const Cart = ({
 
     return (
         <div className="cart-container">
-            <div className=" btn d-flex rounded-pill gap-2 fw-bold text-primary cart-btn" onClick={toggleModal}>
+            <div className=" btn d-flex rounded-pill gap-2 fw-bold" id="cart-btn" onClick={toggleModal}>
                 <div 
                     className=""
                 >Your Cart</div>
-                <div className="bg-danger rounded-circle px-2">{tol}</div>
+                <div className="bg-danger rounded-pill px-2">{tol}</div>
             </div>
         </div>
     )

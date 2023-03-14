@@ -30,10 +30,20 @@ const MealList = () => {
         return newMeals
     }
 
+    const animateCart = () => {
+        const cartBtn = document.getElementById('cart-btn')
+        cartBtn.classList.toggle('cart-btn-animate')
+        setTimeout(() => {
+            cartBtn.classList.toggle('cart-btn-animate')
+        }, 130);
+    }
+
     const handleAddMeal = (e, id) => {
         e.preventDefault()
         const quantity = e.target.amount.value
         if (addMealValidation(e.target.amount)) {
+            animateCart()
+            
             const meal = meals.find(m => m.id === id)
             dispatch({
                 type: 'add',

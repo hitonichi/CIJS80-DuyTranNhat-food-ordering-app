@@ -8,6 +8,7 @@ body::-webkit-scrollbar {
 
 .header {
   position: sticky;
+  z-index: 1;
   top: 0;
   height: 4em;
   display: flex;
@@ -60,12 +61,12 @@ body::-webkit-scrollbar {
 
 .content-container {
   min-height: 100vh;
-  background-color: blanchedalmond;
 }
 
 .about {
   width: 45%;
-  background-color: gainsboro;
+  background-color: #323132;
+  color: white;
   padding: 1em;
   border-radius: 1em;
   margin: 2em;
@@ -74,7 +75,7 @@ body::-webkit-scrollbar {
 
 .meals-container {
   width: 50%;
-  background-color: antiquewhite;
+  background-color: white;
   border-radius: 1em;
   padding: 1em;
   margin: 2em;
@@ -151,45 +152,29 @@ body::-webkit-scrollbar {
   overflow-y: auto;
 }
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .meals-container, .about {
-    width: 90%;
-    margin: 1em;
-  }
-
-  .addToCart-btn {
-    width: 100%;
-  }
-
-  .Modal-content {
-    width: 90%;
-  }
-
-  .active-modal {
-    overflow-y: auto;
-  }
-
-  .order-form {
-    overflow: initial;
-  }
-}
-
 .meal-container {
+  display: grid;
+  grid-template-columns: 20% 55% auto;
+  gap: 0.5em;
   /* d-flex align-items-center justify-content-between */
-  display: flex;
-  flex-direction: row;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* flex-direction: row; */
   align-items: center;
   justify-content: space-between;
   /* height: 100%;
   width: 100%; */
 }
 
+/* .meal-img-container {
+  width: 20%;
+} */
+
 .meal-img {
-  width: 25%;
-  aspect-ratio: 6/5;
+  width: 100%;
+  aspect-ratio: 3/2;
   object-fit: cover;
-  border-radius: 1em;
+  /* border-radius: 1em; */
 }
 
 .meal-info-container {
@@ -220,4 +205,101 @@ body::-webkit-scrollbar {
 .input-is-invalid {
   background-color: red;
   color: white;
+}
+
+.meal-amount-cnt {
+  border: none;
+  border: 1px solid gray;
+}
+
+.meal-amount-cnt:focus-visible {
+  outline: rgb(57, 123, 177) auto 1px;
+}
+
+.order-nav {
+  /* d-flex justify-content-end w-100 */
+  display: flex;
+  justify-content: end;
+  gap: 0.5em;
+  align-items: center;
+  width: 100%;
+}
+
+.add-meal-form-btn {
+  /* d-flex justify-content-end align-items-center mt-2 */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .meals-container, .about {
+    width: 95%;
+    margin: 1em;
+  }
+
+  .addToCart-btn {
+    width: 100%;
+  }
+
+  .Modal-content {
+    width: 95%;
+  }
+
+  .order-form {
+    overflow: initial;
+  }
+
+  .meal-img {
+    aspect-ratio: 1;
+    align-self: flex-start;
+  }
+
+  .meal-price {
+    text-align: right;
+  }
+  
+  .meal-description {
+    /* max-height: 1em; */
+    /* overflow:visible; */
+    order: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .meal-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* display: flex;
+    flex-direction: column; */
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .order-nav {
+    justify-content: space-around;
+  }
+
+  .order-nav button {
+    width: 40%;
+  }
+
+  .add-meal-form {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.5em;
+  }
+
+  .add-meal-form-btn {
+    margin: 0;
+  }
+
+  .add-meal-form-body {
+    width: 50%;
+  }
 }

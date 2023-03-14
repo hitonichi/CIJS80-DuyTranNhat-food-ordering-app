@@ -68,5 +68,4 @@ const cartReducer = (cart, action) => {
         }
     }
 }
-
 const initCart = [];

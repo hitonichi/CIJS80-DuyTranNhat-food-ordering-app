@@ -1,6 +1,13 @@
-$primary: #E38B29;
-$secondary: #F1A661;
-$danger: #850000;
+// $primary: #E38B29;
+// $secondary: #F1A661;
+// $danger: #850000;
+$primary: #862314;
+$secondary: #A85A2E;
+$shade: #481307;
+$danger: #BD4B60;
+$bgDanger: #FFEDF0;
+$bgGray: #383638;
+$shadow: #1d1c1d;
 
 $tint: #FFD8A9;
 $moreTint: #FDEEDC;
@@ -10,47 +17,108 @@ $moreTint: #FDEEDC;
 
 .header {
     background-color: $primary;
+    padding: 0em 10em;
     // z-index: 999;
 }
 
 .title {
-    color: $tint;
+    color: white;
 }
 
 .content-container {
-    background-color: $tint;
+    background-color: $bgGray;
 }
 
-.meals-container, .about {
-    background-color: $moreTint;
+.meals-container {
+    background-color: white;
 }
 
-.total-price, .meal-name {
-    color: $danger;
+.order-btn {
+    // btn btn-primary rounded-pill fw-bold text-light
+    background-color: $primary;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+.meal-description {
+    font-size: $font-size-base * 0.9;
 }
 
 .meal-name, .meal-price {
-    font-size: $font-size-base * 1.75;
+    font-size: $font-size-base * 1.1;
     font-weight: bold;
 }
 
 .meal-price {
-    color: $primary;
+    color: $secondary;
 }
 
-.cart-btn {
-    background-color: $tint;
+#cart-btn {
+    display: flex;
+    gap: 2em;
+    background-color: $shade;
+    color: white;
+    padding: 0.5em 2em;
+    transition: .3s ease;
 }
 
-.cart-btn:hover {
-    background-color: $moreTint;
+#cart-btn:hover {
+    color: white;
+    background-color: #330e05;
+}
+
+.cart-btn-animate {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
 }
 
 .divider {
-    border: 1px solid $danger;
+    border: 1px solid gray;
     z-index: 0;
 }
 
 .meals-container, .about {
-    box-shadow: 0 0 1em $secondary;
+    box-shadow: 0 0 1em $shadow;
+}
+
+.addToCart-btn {
+    padding: 0.3em 1.5em;
+}
+
+// .modal-close-btn {
+//     border: none;
+//     padding: 0.8em;
+//     color: ;
+//     background-color: $primary;
+//     border-radius: 1em;
+//     font-weight: bold;
+//   }
+
+.invalid-input {
+    border: 2px solid #721a2a;
+}
+
+.order-input {
+    margin-bottom: 0.3em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.order-input input {
+    width: 55%;
+}
+
+@media only screen and (max-width: 768px) {
+/* For mobile phones: */
+    .header {
+        padding: 1em;
+    }
+
+    .order-input input {
+        width: 100%;
+    }
 }

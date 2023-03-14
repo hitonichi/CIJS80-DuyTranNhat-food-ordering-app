@@ -1,20 +1,14 @@
-import  Button from "react-bootstrap/esm/Button"
-
 const AddMealForm = ({
     handleSubmit
 }) => {
     return (
-        <form className="d-flex flex-column flex-shrink-0 w-25" onSubmit={handleSubmit}>
-                <div className="d-flex justify-content-md-end">
-                    <div className="col-md-auto fw-bold p-0">
+        <form className="add-meal-form" onSubmit={handleSubmit}>
+                <div className="d-flex gap-2 justify-content-md-end add-meal-form-body">
                         <label htmlFor="amount">Amount:</label>
-                    </div>
-                    <div className="col-md-3 ">
-                        <input style={{width: "100%"}} type="number" min={1} id="amount" defaultValue={1} className="rounded border-secondary meal-amount-cnt"></input>
-                    </div>
+                        <input style={{width: "100%"}} type="number" min={1} id="amount" defaultValue={1} className="rounded meal-amount-cnt"></input>
                 </div>
-                <div className="d-flex justify-content-end mt-2">
-                        <Button type="submit" variant="outline-danger" className="rounded-pill px-2 text-center addToCart-btn" size="sm">+Add</Button>
+                <div className="add-meal-form-btn">
+                    <button type="submit" className="btn btn-primary rounded-pill text-center addToCart-btn">+Add</button>
                 </div>
         </form>
     )
