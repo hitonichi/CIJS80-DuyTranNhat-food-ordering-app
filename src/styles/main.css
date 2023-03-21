@@ -10863,6 +10863,9 @@ textarea.form-control-lg {
   .order-input input {
     width: 100%;
   }
+  .addToCart-btn {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

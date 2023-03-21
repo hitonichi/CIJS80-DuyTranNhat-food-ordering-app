@@ -240,10 +240,6 @@ body::-webkit-scrollbar {
     margin: 1em;
   }
 
-  .addToCart-btn {
-    width: 100%;
-  }
-
   .Modal-content {
     width: 95%;
   }
@@ -270,10 +266,9 @@ body::-webkit-scrollbar {
   }
 
   .meal-info {
+    align-self: self-start;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* display: flex;
-    flex-direction: column; */
     grid-column-start: 2;
     grid-column-end: 4;
   }
@@ -297,6 +292,7 @@ body::-webkit-scrollbar {
 
   .add-meal-form-btn {
     margin: 0;
+    width: 40%;
   }
 
   .add-meal-form-body {

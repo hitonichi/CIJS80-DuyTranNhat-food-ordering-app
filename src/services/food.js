@@ -8,7 +8,7 @@ const getAll = async () => {
 
 const create = async (newObj) => {
     const res = await axios
-        .post(`${baseUrl}/orders`, newObj)
+        .post(`${baseUrl}/order`, newObj)
     return res
 }
 
