@@ -13,14 +13,14 @@ const Navbar = () => {
             to: "/about"
         },
         {
-            title: "Coupon",
+            title: "Store",
             icon: "",
-            to: "/coupon"
+            to: "/store"
         },
         {
-            title: "Contact",
+            title: "Feedback",
             icon: "",
-            to: "/contact"
+            to: "/feedback"
         },
     ];
 

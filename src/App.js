@@ -10,9 +10,12 @@ import Header from './components/Header';
 import Cart from './components/Cart';
 import Title from './components/Title';
 import About from './components/About';
-import AboutPage from './components/AboutPage';
 import MealList from './components/MealsDisplay/MealList';
+
 import Navbar from './components/Navbar';
+import AboutPage from './components/AboutPage';
+import FeedbackPage from './components/FeedbackPage';
+import StorePage from './components/StorePage';
 
 const App = () => {
   const [modal, setModal] = useState(false)
@@ -45,8 +48,8 @@ const App = () => {
             <Routes>
               <Route path="/" element={<MealList></MealList>} />
               <Route path="/about" element={<AboutPage />} />
-              <Route path="/coupon" element={<h1>Coupon Page</h1>} />
-              <Route path="/contact" element={<h1>Contacts Page</h1>} />
+              <Route path="/store" element={<StorePage />} />
+              <Route path="/feedback" element={<FeedbackPage />} />
             </Routes>
           </div>
         </CartProvider>
