@@ -37,7 +37,54 @@ body::-webkit-scrollbar {
   color: #61dafb;
 }
 
-.modal-open-btn, .modal-close-btn {
+
+/* ========== Navbar ========== */
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+}
+
+.nav-item {
+  padding: 11px 16px;
+  font-size: 1.125em;
+  border-radius: 8px;
+  margin: 0 4px;
+  color: white;
+}
+
+.nav-item:hover {
+  background-color: #bd4b60;
+  transition: all .4s linear;
+  cursor: pointer;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+/* ============================== */
+
+
+/* ========== About page ========== */
+.about-page-container {
+  width: 50%;
+  background-color: white;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 2em;
+  text-align: center;
+}
+
+.about-text {
+  text-align: justify;
+}
+/* ================================== */
+
+
+.modal-open-btn,
+.modal-close-btn {
   border: none;
   padding: 0.8em;
   background-color: bisque;
@@ -45,14 +92,17 @@ body::-webkit-scrollbar {
   font-weight: bold;
 }
 
-.modal-open-btn:hover, .modal-close-btn:hover {
+.modal-open-btn:hover,
+.modal-close-btn:hover {
   border: none;
   padding: 0.8em;
   background-color: rgb(184, 83, 46);
   color: aliceblue;
 }
 
-.content-container, .about, .meals-container {
+.content-container,
+.about,
+.meals-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,7 +141,8 @@ body::-webkit-scrollbar {
   overflow-y: hidden;
 }
 
-.Modal, .Modal-overlay {
+.Modal,
+.Modal-overlay {
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -102,7 +153,7 @@ body::-webkit-scrollbar {
 }
 
 .Modal-overlay {
-  background: rgba(49,49,49,0.8);
+  background: rgba(49, 49, 49, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,8 +285,10 @@ body::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 768px) {
+
   /* For mobile phones: */
-  .meals-container, .about {
+  .meals-container,
+  .about {
     width: 95%;
     margin: 1em;
   }
@@ -256,7 +309,7 @@ body::-webkit-scrollbar {
   .meal-price {
     text-align: right;
   }
-  
+
   .meal-description {
     /* max-height: 1em; */
     /* overflow:visible; */
