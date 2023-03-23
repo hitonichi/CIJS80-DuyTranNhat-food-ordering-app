@@ -171,6 +171,45 @@
       "postal": "12321",
       "city": "h",
       "id": 19
+    },
+    {
+      "name": "Duy",
+      "street": "18 ",
+      "postal": "12345",
+      "city": "HCM",
+      "id": 20
+    }
+  ],
+  "stores": [
+    {
+      "name": "West Hill",
+      "address": "2037 Davisson Street, Indianapolis, Indiana(IN)",
+      "phone": "765-919-1568",
+      "id": 1
+    },
+    {
+      "name": "East Coast",
+      "address": "2180 Jarvis Street, HAMDEN, Ohio(OH)",
+      "phone": "716-896-2096",
+      "id": 2
+    },
+    {
+      "name": "South Valley",
+      "address": "2797 Mulberry Street, Houston, Texas(TX)",
+      "phone": "936-678-8909",
+      "id": 3
+    },
+    {
+      "name": "North Canyon",
+      "address": "229 Turnpike Drive, BECKLEY, West Virginia(WV)",
+      "phone": "256-426-2790",
+      "id": 4
+    },
+    {
+      "name": "Centre Mall",
+      "address": "3524 Laurel Lane, Comstock, Texas(TX)",
+      "phone": "432-292-0279",
+      "id": 5
     }
   ]
 }
