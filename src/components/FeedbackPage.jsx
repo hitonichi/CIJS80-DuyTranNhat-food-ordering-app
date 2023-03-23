@@ -26,7 +26,7 @@ const FeedbackPage = () => {
     ];
 
     return (
-        <form className="feedback-form">
+        <form className="feedback-form" onSubmit={(e) => {e.preventDefault()}}>
             <h2 className="feedback-title">Give feedback</h2>
             <div className="feedback-content">
                 <div className="feedback-reactions">
