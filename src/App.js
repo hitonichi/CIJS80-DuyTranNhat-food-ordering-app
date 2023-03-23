@@ -10,6 +10,7 @@ import Cart from './components/Cart';
 import Title from './components/Title';
 import About from './components/About';
 import MealList from './components/MealsDisplay/MealList';
+import Footer from './components/Footer';
 
 const App = () => {
   const [modal, setModal] = useState(false)
@@ -40,6 +41,7 @@ const App = () => {
             <MealList ></MealList>
           </div>
       </CartProvider>
+      <Footer></Footer>
     </div>
   )
 }
