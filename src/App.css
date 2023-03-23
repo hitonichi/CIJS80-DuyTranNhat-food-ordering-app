@@ -37,7 +37,186 @@ body::-webkit-scrollbar {
   color: #61dafb;
 }
 
-.modal-open-btn, .modal-close-btn {
+
+/* ========== Navbar ========== */
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+}
+
+.nav-item {
+  padding: 11px 16px;
+  font-size: 1.125em;
+  border-radius: 8px;
+  margin: 0 4px;
+  color: white;
+}
+
+.nav-item:hover {
+  background-color: #bd4b60;
+  transition: all .4s linear;
+  cursor: pointer;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+/* ============================== */
+
+
+/* ========== About page ========== */
+.about-page-container {
+  width: 50%;
+  background-color: white;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 2em;
+  text-align: center;
+}
+
+.about-text {
+  text-align: justify;
+}
+/* ================================== */
+
+/* ========== Store Page ========== */
+.store-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.store-card {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 12px;
+  margin: 10px;
+  width: 380px;
+  border-radius: 10px;
+}
+
+.store-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.store-address,
+.store-name,
+.store-phone {
+  display: flex;
+  align-items: center;
+}
+
+.store-name {
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.store-address {
+  font-size: 15px;
+  margin: 15px 0;
+}
+
+.store-phone {
+  font-size: 16px;
+  margin: 0;
+}
+
+.store-icon {
+  font-size: 18px;
+  margin-right: 5px;
+}
+/* ================================== */
+
+
+/* ======== FeedBack Page =========== */
+.feedback-form { 
+  margin-top: 25px;
+  background-color: #fff;
+  width: 720px;
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+.feedback-title {
+  font-size: 26px;
+  padding: 0 20px 20px 20px;
+}
+
+.feedback-content {
+  padding: 0 20px;
+}
+
+.feedback-reactions {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  text-align: center;
+  font-size: 50px;
+  margin: 0 -6px;
+}
+
+.feedback-react {
+  width: 125px;
+  border: 2px solid #d9deeb;
+  margin: 6px;
+  border-radius: 6px;
+  transition: all linear .2s;
+}
+
+.active,
+.feedback-react:hover {
+  border: 2px solid;
+  background-color: #862314;
+  color: white;
+  cursor: pointer;
+}
+
+.feedback-text {
+  display: block;
+  font-size: 16px;
+  padding-bottom: 14px;
+}
+
+.feedback-subtitle {
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+.feedback-areas {
+  border: 2px solid #a3b8e8;
+  border-radius: 6px;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  color: #333;
+}
+
+.feedback-submit-btn {
+  width: 200px;
+  height: 40px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  background-color: #862314;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  transition: all linear .2s;
+}
+
+.feedback-submit-btn:hover {
+  background-color: white;
+  color: #862314;
+  border: 1px solid #862314;
+}
+/* ================================== */
+
+
+.modal-open-btn,
+.modal-close-btn {
   border: none;
   padding: 0.8em;
   background-color: bisque;
@@ -45,14 +224,17 @@ body::-webkit-scrollbar {
   font-weight: bold;
 }
 
-.modal-open-btn:hover, .modal-close-btn:hover {
+.modal-open-btn:hover,
+.modal-close-btn:hover {
   border: none;
   padding: 0.8em;
   background-color: rgb(184, 83, 46);
   color: aliceblue;
 }
 
-.content-container, .about, .meals-container {
+.content-container,
+.about,
+.meals-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,7 +273,8 @@ body::-webkit-scrollbar {
   overflow-y: hidden;
 }
 
-.Modal, .Modal-overlay {
+.Modal,
+.Modal-overlay {
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -102,7 +285,7 @@ body::-webkit-scrollbar {
 }
 
 .Modal-overlay {
-  background: rgba(49,49,49,0.8);
+  background: rgba(49, 49, 49, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,8 +417,10 @@ body::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 768px) {
+
   /* For mobile phones: */
-  .meals-container, .about {
+  .meals-container,
+  .about {
     width: 95%;
     margin: 1em;
   }
@@ -256,7 +441,7 @@ body::-webkit-scrollbar {
   .meal-price {
     text-align: right;
   }
-  
+
   .meal-description {
     /* max-height: 1em; */
     /* overflow:visible; */
