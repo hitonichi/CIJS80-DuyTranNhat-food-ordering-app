@@ -9,7 +9,7 @@ const AboutPage = () => {
                 Quaerat? Veritatis enim esse placeat? Eligendi dolor porro expedita quis qui eveniet earum alias! Quaerat cumque dolor dignissimos.
                 Mollitia assumenda eveniet eius laboriosam est necessitatibus minus quos quam reiciendis ullam incidunt odit, tempore dolore tempora! Ut ratione eaque, mollitia nisi dignissimos explicabo, cupiditate voluptates asperiores harum odit nihil.
             </p>
-            <Link classsName="about-link" to="/">Back home</Link>
+            <Link className="about-link" to="/">Back home</Link>
         </div>
     );
 }

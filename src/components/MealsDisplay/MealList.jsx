@@ -68,7 +68,7 @@ const MealList = () => {
         <div className="meals-container">
             <div className="d-flex flex-column">
                 {meals.map((meal, id) => (
-                    <div className="d-flex flex-column" key={meal.id}>
+                    <div className="" key={meal.id}>
                         <Meal meal={meal} handleAddMeal={handleAddMeal}></Meal>
                         {id !== meals.length - 1 && (<hr className="divider"></hr>)}
                     </div>

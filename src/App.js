@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import './styles/main.css'
 
 import { useState } from 'react';
@@ -45,7 +45,7 @@ const App = () => {
           </Header>
 
           <div className="content-container">
-            <About></About>
+            {/* <About></About> */}
             <Routes>
               <Route path="/" element={<MealList></MealList>} />
               <Route path="/about" element={<AboutPage />} />
