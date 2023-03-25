@@ -13,7 +13,7 @@ const Navbar = () => {
             to: "/about"
         },
         {
-            title: "Store",
+            title: "Stores",
             icon: "",
             to: "/store"
         },
