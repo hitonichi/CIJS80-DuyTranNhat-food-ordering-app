@@ -8,7 +8,8 @@ const Cart = ({
 
     return (
         <div className="cart-container">
-            <div className=" btn d-flex rounded-pill gap-2 fw-bold" id="cart-btn" onClick={toggleModal}>
+            <div className="" id="cart-btn" onClick={toggleModal}>
+                <i className="fa-solid fa-cart-shopping"></i>
                 <div 
                     className=""
                 >Your Cart</div>

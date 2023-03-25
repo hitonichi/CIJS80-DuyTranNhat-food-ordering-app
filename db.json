@@ -39,7 +39,21 @@
     }
   ],
   "orders": [
-    
+    {
+      "name": "j",
+      "street": "j",
+      "postal": "12321",
+      "city": "k",
+      "cart": [
+        {
+          "id": "m1",
+          "name": "Sushi",
+          "price": "22.99",
+          "quantity": 3
+        }
+      ],
+      "id": 1
+    }
   ],
   "stores": [
     {
@@ -76,6 +90,33 @@
       "phone": "432-292-0279",
       "id": 5,
       "img": "https://th.bing.com/th/id/OIP.vnd4YB8rtPfxYAu9P05cUQHaE8?pid=ImgDet&w=690&h=460&rs=1"
+    }
+  ],
+  "feedbacks": [
+    {
+      "reaction": "Okay",
+      "notes": "sasdasdf",
+      "id": 1
+    },
+    {
+      "reaction": "Okay",
+      "notes": "asdfaf",
+      "id": 2
+    },
+    {
+      "reaction": "Okay",
+      "notes": "d",
+      "id": 3
+    },
+    {
+      "reaction": "Okay",
+      "notes": "s",
+      "id": 4
+    },
+    {
+      "reaction": "Okay",
+      "notes": "sdfdfssdf",
+      "id": 5
     }
   ]
 }

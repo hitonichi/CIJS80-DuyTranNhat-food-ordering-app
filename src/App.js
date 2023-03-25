@@ -17,6 +17,7 @@ import Navbar from './components/Navbar';
 import AboutPage from './components/AboutPage';
 import FeedbackPage from './components/FeedbackPage';
 import StorePage from './components/StorePage';
+import NavBtn from './components/NavBtn';
 
 const App = () => {
   const [modal, setModal] = useState(false)
@@ -39,6 +40,7 @@ const App = () => {
         <CartProvider>
           <Modal modal={modal} toggleModal={toggleModal} isOrdered={isOrdered} setOrdered={setOrdered}></Modal>
           <Header>
+            <NavBtn></NavBtn>
             <Title></Title>
             <Navbar />
             <Cart toggleModal={toggleModal}></Cart>

@@ -12,4 +12,10 @@ const create = async (newObj) => {
     return res
 }
 
-export default {getAll, create}
+const createFeedback = async (newObj) => {
+    const res = await axios
+        .post(`${baseUrl}/feedbacks`, newObj)
+    return res
+}
+
+export default {getAll, create, createFeedback}

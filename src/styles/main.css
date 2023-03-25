@@ -10786,6 +10786,8 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: space-between;
   padding: 1em;
+  background-color: #FF9F0D;
+  padding: 0em 10em 0em 3em;
 }
 
 .title {
@@ -10873,15 +10875,15 @@ body::-webkit-scrollbar {
 .store-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  padding: 10px;
+  padding: 1em;
+  gap: 1em;
 }
 
 .store-card {
   background-color: #F2F2F2;
-  padding: 12px;
-  margin: 10px;
-  width: 380px;
-  border-radius: 10px;
+  padding: 1em;
+  width: 100%;
+  border-radius: 1em;
   transition: all 0.3s ease;
 }
 
@@ -10931,7 +10933,7 @@ body::-webkit-scrollbar {
   margin-top: 25px;
   background-color: #F2F2F2;
   width: 720px;
-  padding: 20px 0;
+  padding: 1em 0em;
   border-radius: 10px;
 }
 
@@ -10955,7 +10957,6 @@ body::-webkit-scrollbar {
 .feedback-react {
   width: 125px;
   border: 1px solid black;
-  margin: 6px;
   border-radius: 6px;
   transition: all 0.2s ease-in;
 }
@@ -11259,8 +11260,120 @@ body::-webkit-scrollbar {
   gap: 1em;
 }
 
+.title {
+  color: white;
+}
+
+.content-container {
+  background-color: #fff;
+}
+
+.order-btn {
+  background-color: #FF9F0D;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
+
+.meal-description {
+  font-size: 0.9rem;
+}
+
+.meal-name, .meal-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.meal-price {
+  color: #7CA233;
+}
+
+#cart-btn {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  font-weight: bold;
+  background-color: #e58a00;
+  color: white;
+  padding: 0.5em 0.9em 0.5em 1em;
+  transition: 0.3s ease-in;
+  border-radius: 0.5em;
+}
+
+#cart-btn:hover {
+  color: white;
+  background-color: #bb7000;
+  cursor: pointer;
+}
+
+.cart-btn-animate {
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+}
+
+.divider {
+  border: 1px solid gray;
+  z-index: 0;
+}
+
+.meals-container, .about-page-container, .store-card {
+  box-shadow: 0 0 0.5em #b6b6b6;
+}
+
+.addToCart-btn {
+  padding: 0.3em 1.5em;
+  font-weight: bold;
+  color: white;
+}
+
+.addToCart-btn:hover {
+  color: white;
+}
+
+.invalid-input {
+  border: 2px solid #721a2a;
+}
+
+.order-input {
+  margin-bottom: 0.3em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.order-input input {
+  width: 55%;
+}
+
+.footer {
+  background-color: #383638;
+  color: white;
+}
+
+.mobile-nav-btn input,
+.mobile-nav-btn label,
+.mobile-navbar {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
+  .header {
+    padding: 1em;
+    justify-content: start;
+    gap: 0.5em;
+  }
+  .cart-container {
+    margin-left: auto;
+  }
+  .order-input input {
+    width: 100%;
+  }
+  .addToCart-btn {
+    width: 100%;
+  }
   .meals-container,
   .about {
     width: 95%;
@@ -11320,115 +11433,78 @@ body::-webkit-scrollbar {
     bottom: 0;
     right: 0;
     transform: none;
-    margin: 0.5em;
+    margin: 1em;
   }
   .contacts {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 45% 45%;
+    word-wrap: break-word;
   }
-}
-.header {
-  background-color: #FF9F0D;
-  padding: 0em 10em;
-}
-
-.title {
-  color: white;
-}
-
-.content-container {
-  background-color: #fff;
-}
-
-.order-btn {
-  background-color: #FF9F0D;
-  color: white;
-  font-weight: bold;
-  outline: none;
-  border: none;
-}
-
-.meal-description {
-  font-size: 0.9rem;
-}
-
-.meal-name, .meal-price {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-.meal-price {
-  color: #7CA233;
-}
-
-#cart-btn {
-  display: flex;
-  gap: 2em;
-  background-color: #e58a00;
-  color: white;
-  padding: 0.5em 2em;
-  transition: 0.3s ease;
-}
-
-#cart-btn:hover {
-  color: white;
-  background-color: #bb7000;
-}
-
-.cart-btn-animate {
-  transform: scale(1.3);
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-}
-
-.divider {
-  border: 1px solid gray;
-  z-index: 0;
-}
-
-.meals-container, .about-page-container, .store-card {
-  box-shadow: 0 0 0.5em #b6b6b6;
-}
-
-.addToCart-btn {
-  padding: 0.3em 1.5em;
-  font-weight: bold;
-  color: white;
-}
-
-.addToCart-btn:hover {
-  color: white;
-}
-
-.invalid-input {
-  border: 2px solid #721a2a;
-}
-
-.order-input {
-  margin-bottom: 0.3em;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2em;
-}
-
-.order-input input {
-  width: 55%;
-}
-
-.footer {
-  background-color: #383638;
-  color: white;
-}
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .header {
-    padding: 1em;
+  .nav-list {
+    display: none;
   }
-  .order-input input {
-    width: 100%;
+  #cart-btn div:nth-child(2) {
+    display: none;
+    background-color: red;
   }
-  .addToCart-btn {
-    width: 100%;
+  .mobile-nav-btn label {
+    display: block;
+    background-color: #e58a00;
+    padding: 0.5em 0.8em;
+    border-radius: 0.5em;
+    color: white;
+    transition: all 0.3 ease-in;
+  }
+  .mobile-navbar {
+    display: none;
+    position: fixed;
+    top: 4em;
+    left: 0em;
+    z-index: 20;
+    width: 100vw;
+    height: 100%;
+    background-color: #bb7000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    transition: all 0.3 ease-in;
+  }
+  #nav-check:checked ~ .mobile-navbar {
+    display: flex;
+  }
+  .nav-item {
+    height: fit-content;
+    display: block;
+  }
+  .nav-item.active {
+    width: 100vw;
+    font-weight: bold;
+  }
+  .about-page-container {
+    width: 90%;
+  }
+  .store-container {
+    grid-template-columns: 1fr;
+  }
+  .feedback-form {
+    width: 90%;
+  }
+  .feedback-reactions {
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    overflow: scroll;
+  }
+  .feedback-react {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+  .feedback-react span {
+    display: none;
   }
 }
 

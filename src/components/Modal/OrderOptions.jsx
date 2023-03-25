@@ -30,6 +30,9 @@ const OrderOptions = ({
     }
 
     const onSubmit = data => {
+        // add cart info into the sending data
+        data = {...data, cart};
+        
         FoodServices
             .create(data)
             .then((res) => {

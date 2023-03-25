@@ -1,4 +1,5 @@
 import { BiAngry, BiSad, BiSmile, BiHappy, BiHappyHeartEyes } from "react-icons/bi";
+import FoodServices from '../services/food'
 
 const FeedbackPage = () => {
 
@@ -21,12 +22,38 @@ const FeedbackPage = () => {
         },
         {
             icon: <BiHappyHeartEyes />,
-            text: "Amazing"
+            text: "Great"
         },
     ];
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // console.log(e);
+        // console.log(e.target);
+        console.log(e.target.reaction.value);
+        // console.log(e.target.feedbackArea.value);
+        const feedback = {
+            reaction: e.target.reaction.value,
+            notes: e.target.feedbackArea.value
+        }
+        FoodServices
+        .createFeedback(feedback)
+        .then((res) => {
+            // console.log(res);
+            alert('Thank you for your opinion!');
+            // e.target.reaction.value = "";
+            document.querySelector('input[name="reaaction"]:checked').checked = false;
+            console.log(e.target.reaction.value);
+            e.target.feedbackArea.value = "";
+        })
+        .catch(e => {
+            alert('Your order cannot be processed right now. Please try again later.')
+            // console.log(e);
+        })
+    }
+
     return (
-        <form className="feedback-form" onSubmit={(e) => {e.preventDefault()}}>
+        <form className="feedback-form" onSubmit={(e) => {handleSubmit(e)}}>
             <h2 className="feedback-title">Give feedback</h2>
             <div className="feedback-content">
                 <div className="feedback-reactions">
@@ -36,6 +63,7 @@ const FeedbackPage = () => {
                                 type="radio"
                                 name="reaction"
                                 id={reaction.text}
+                                value={reaction.text}
                                 className="feedback-reaction-radio"></input>
                             <label htmlFor={reaction.text}>
                                 <div className="feedback-react">
@@ -47,7 +75,7 @@ const FeedbackPage = () => {
                     ))}
                 </div>
                 <h4 className="feedback-subtitle">Tell us what can be improved?</h4>
-                <textarea className="feedback-areas" rows="4" cols="50" spellCheck="false" placeholder="Other suggestions..."></textarea>
+                <textarea name="feedbackArea" className="feedback-areas" rows="4" cols="50" spellCheck="false" placeholder="Other suggestions..."></textarea>
                 <button className="feedback-submit-btn">Submit</button>
             </div>
         </form>
