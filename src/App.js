@@ -49,8 +49,8 @@ const App = () => {
           <div className="content-container">
             {/* <About></About> */}
             <Routes>
-              <Route path="/" element={<MealList></MealList>} />
-              <Route path="/about" element={<AboutPage />} />
+              <Route path="/" element={<AboutPage></AboutPage>} />
+              <Route path="/menu" element={<MealList></MealList>} />
               <Route path="/store" element={<StorePage />} />
               <Route path="/feedback" element={<FeedbackPage />} />
             </Routes>

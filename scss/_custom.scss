@@ -130,6 +130,7 @@ $moreTint: #FDEEDC;
   
   /* ========== Store Page ========== */
   .store-container {
+    width: 70%;
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 1em;
@@ -634,6 +635,31 @@ $moreTint: #FDEEDC;
   display: none;
 }
 
+#aboutCarousel,
+#promoCarousel {
+  width: 100%;
+  height: 25em;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  position: relative;
+  height: 100%;
+  color: white;
+}
+
+.carousel-item-txt {
+  height: 100%;
+  width: 100%;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 768px) {
   
   /* For mobile phones: */
@@ -799,6 +825,8 @@ $moreTint: #FDEEDC;
   .store-container {
     // width:;
     grid-template-columns: 1fr;
+    width: 95%;
+    padding: 0.5em 0em;
   }
 
   .feedback-form {

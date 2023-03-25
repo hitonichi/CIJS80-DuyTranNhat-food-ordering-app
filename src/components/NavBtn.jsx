@@ -7,12 +7,12 @@ const NavBtn = () => {
             to: "/"
         },
         {
-            title: "About",
+            title: "Menu",
             icon: "",
-            to: "/about"
+            to: "/menu"
         },
         {
-            title: "Store",
+            title: "Stores",
             icon: "",
             to: "/store"
         },
