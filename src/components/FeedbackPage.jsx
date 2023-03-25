@@ -26,14 +26,23 @@ const FeedbackPage = () => {
     ];
 
     return (
-        <form className="feedback-form">
+        <form className="feedback-form" onSubmit={(e) => {e.preventDefault()}}>
             <h2 className="feedback-title">Give feedback</h2>
             <div className="feedback-content">
                 <div className="feedback-reactions">
                     {reactions.map((reaction, index) => (
-                        <div key={index} className="feedback-react">
-                            {reaction.icon}
-                            <span className="feedback-text">{reaction.text}</span>
+                        <div key={index}>
+                            <input
+                                type="radio"
+                                name="reaction"
+                                id={reaction.text}
+                                className="feedback-reaction-radio"></input>
+                            <label htmlFor={reaction.text}>
+                                <div className="feedback-react">
+                                    {reaction.icon}
+                                    <span className="feedback-text">{reaction.text}</span>
+                                </div>
+                            </label>
                         </div>
                     ))}
                 </div>

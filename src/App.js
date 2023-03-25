@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import './styles/main.css'
 
 import { useState } from 'react';
@@ -11,6 +11,7 @@ import Cart from './components/Cart';
 import Title from './components/Title';
 import About from './components/About';
 import MealList from './components/MealsDisplay/MealList';
+import Footer from './components/Footer';
 
 import Navbar from './components/Navbar';
 import AboutPage from './components/AboutPage';
@@ -44,7 +45,7 @@ const App = () => {
           </Header>
 
           <div className="content-container">
-            <About></About>
+            {/* <About></About> */}
             <Routes>
               <Route path="/" element={<MealList></MealList>} />
               <Route path="/about" element={<AboutPage />} />
@@ -54,6 +55,7 @@ const App = () => {
           </div>
         </CartProvider>
       </Router>
+      <Footer></Footer>
     </div>
   )
 }

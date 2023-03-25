@@ -1,6 +1,6 @@
 const Title = () => {
     return (
-        <div className="title">HeHehuhu</div>
+        <div className="title">FaMealy</div>
     )
 }
 

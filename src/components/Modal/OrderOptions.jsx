@@ -97,8 +97,8 @@ const OrderOptions = ({
     }
     return (
         <div className='order-nav'>
-            <button className="btn btn-outline-primary rounded-pill" onClick={toggleModal}>Close</button>
-            <button className='btn btn-primary rounded-pill text-light' onClick={() => openOrder()}>Order</button>
+            <button className="btn btn-outline-primary rounded-pill fw-bold" onClick={toggleModal}>Close</button>
+            <button className='btn btn-primary rounded-pill text-light fw-bold' onClick={() => openOrder()}>Order</button>
         </div>
     )
 }

@@ -416,6 +416,30 @@ body::-webkit-scrollbar {
   margin-top: 0.5em;
 }
 
+.to-top-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-10%, -50%);
+  background-color: red;
+  padding: 0.5em 1em;
+  border-radius: 0.8em;
+  color: white;
+  transition: background-color 0.1s;
+}
+
+.to-top-btn:hover {
+  background-color: rgb(151, 8, 8);
+  color: white;
+}
+
+.contacts {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+}
+
 @media only screen and (max-width: 768px) {
 
   /* For mobile phones: */
@@ -482,5 +506,18 @@ body::-webkit-scrollbar {
 
   .add-meal-form-body {
     width: 50%;
+  }
+
+  .to-top-btn {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    transform: none;
+    margin: 0.5em;
+  }
+
+  .contacts {
+    grid-template-columns: 1fr 1fr;
   }
 }
