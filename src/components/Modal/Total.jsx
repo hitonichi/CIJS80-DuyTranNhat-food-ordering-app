@@ -3,7 +3,7 @@ const Total = ({
 }) => {
     return (
         <div className="total-price">
-            <div>
+            <div >
                 Total Amount
             </div>
             <div>

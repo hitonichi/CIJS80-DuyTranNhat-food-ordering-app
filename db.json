@@ -12,7 +12,7 @@
       "name": "Barbecue Burger",
       "description": "American, raw, meaty",
       "price": 12.99,
-      "image": "http://loremflickr.com/640/480/burger"
+      "image": "https://th.bing.com/th/id/OIP.Sa9ZfKEPzreh38i8xrwQJgHaEo?pid=ImgDet&rs=1"
     },
     {
       "id": "m4",
@@ -22,194 +22,60 @@
       "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/7/21/1/HE_Green-Smoothie-Bowl.jpg.rend.hgtvcom.616.462.suffix/1437508213013.jpeg"
     },
     {
-      "name": "hello",
-      "price": "311.005",
-      "description": "The beautiful range of Apple Naturalé that has an The beautiful range of Apple Naturalé that has an ",
-      "image": "http://loremflickr.com/640/480/food",
+      "name": "Egg Tart",
+      "price": "2.005",
+      "description": "The appetizing golden center surrounded by crispy layers of shells will definitely satisfy the customers.",
+      "image": "https://th.bing.com/th/id/OIP.FQN_Dut9SGsasSnLfVwoLAHaGU?pid=ImgDet&w=478&h=408&rs=1",
       "id": "m5",
       "age": 30
     },
     {
-      "name": "Stew",
-      "price": "1.105",
-      "description": "The beautiful range of Apple Naturalé that has an The beautiful range of Apple Naturalé that has an has an The beautiful range of Apple Naturalé that has an ",
-      "image": "http://loremflickr.com/640/480/stew",
+      "name": "Herbal Stew",
+      "price": "5.105",
+      "description": "Comprises of multiple herbs and vegetables, this will soothen your anger, lighten your mood and brings ample effects!",
+      "image": "https://th.bing.com/th/id/OIP.OvT-hU5-T64wvbm55Tj5qwHaFs?pid=ImgDet&rs=1",
       "id": "m6",
       "age": 30
     }
   ],
   "orders": [
-    {
-      "name": "duy",
-      "street": "duy",
-      "postal": "12345",
-      "city": "duy",
-      "id": 1
-    },
-    {
-      "name": "duy",
-      "street": "duy",
-      "postal": "12345",
-      "city": "duy",
-      "id": 2
-    },
-    {
-      "name": "duy",
-      "street": "duy",
-      "postal": "12345",
-      "city": "duy",
-      "id": 3
-    },
-    {
-      "name": "duy",
-      "street": "duy",
-      "postal": "12345",
-      "city": "duy",
-      "id": 4
-    },
-    {
-      "name": "Duy",
-      "street": "18",
-      "postal": "12304",
-      "city": "Duy",
-      "id": 5
-    },
-    {
-      "name": "h",
-      "street": "h",
-      "postal": "12412",
-      "city": "s",
-      "id": 6
-    },
-    {
-      "name": "h",
-      "street": "h",
-      "postal": "12412",
-      "city": "s",
-      "id": 7
-    },
-    {
-      "name": "j",
-      "street": "j",
-      "postal": "12321",
-      "city": "k",
-      "id": 8
-    },
-    {
-      "name": "j",
-      "street": "j",
-      "postal": "12321",
-      "city": "k",
-      "id": 9
-    },
-    {
-      "name": "k",
-      "street": "k",
-      "postal": "12321",
-      "city": "1",
-      "id": 10
-    },
-    {
-      "name": "h",
-      "street": "h",
-      "postal": "12321",
-      "city": "h",
-      "id": 11
-    },
-    {
-      "name": "k",
-      "street": "k",
-      "postal": "12321",
-      "city": "k",
-      "id": 12
-    },
-    {
-      "name": "l",
-      "street": "l",
-      "postal": "12321",
-      "city": "l",
-      "id": 13
-    },
-    {
-      "name": "l",
-      "street": "l",
-      "postal": "12321",
-      "city": "l",
-      "id": 14
-    },
-    {
-      "name": "s",
-      "street": "s",
-      "postal": "12312",
-      "city": "a",
-      "id": 15
-    },
-    {
-      "name": "sa",
-      "street": "a",
-      "postal": "11111",
-      "city": "q",
-      "id": 16
-    },
-    {
-      "name": "a",
-      "street": "a",
-      "postal": "11111",
-      "city": "1",
-      "id": 17
-    },
-    {
-      "name": "a",
-      "street": "a",
-      "postal": "11111",
-      "city": "a",
-      "id": 18
-    },
-    {
-      "name": "du",
-      "street": "du",
-      "postal": "12321",
-      "city": "h",
-      "id": 19
-    },
-    {
-      "name": "Duy",
-      "street": "18 ",
-      "postal": "12345",
-      "city": "HCM",
-      "id": 20
-    }
+    
   ],
   "stores": [
     {
       "name": "West Hill",
       "address": "2037 Davisson Street, Indianapolis, Indiana(IN)",
       "phone": "765-919-1568",
-      "id": 1
+      "id": 1,
+      "img": "https://th.bing.com/th/id/OIP.oetnNwsceeQQo36_Qz27MQHaE8?pid=ImgDet&rs=1"
     },
     {
       "name": "East Coast",
       "address": "2180 Jarvis Street, HAMDEN, Ohio(OH)",
       "phone": "716-896-2096",
-      "id": 2
+      "id": 2,
+      "img": "https://th.bing.com/th/id/R.5fdd0cef636db91a6f3dbaf91dab6fa3?rik=Bf32qL0qRDEovg&pid=ImgRaw&r=0"
     },
     {
       "name": "South Valley",
       "address": "2797 Mulberry Street, Houston, Texas(TX)",
       "phone": "936-678-8909",
-      "id": 3
+      "id": 3,
+      "img": "https://th.bing.com/th/id/R.c5397206312acdaaa54dca4dce702bfe?rik=1GnWpa1P%2fh1G8g&pid=ImgRaw&r=0"
     },
     {
       "name": "North Canyon",
       "address": "229 Turnpike Drive, BECKLEY, West Virginia(WV)",
       "phone": "256-426-2790",
-      "id": 4
+      "id": 4,
+      "img": "https://philconnect.edu.vn/wp-content/uploads/2018/02/RESTAURANT.jpg"
     },
     {
       "name": "Centre Mall",
       "address": "3524 Laurel Lane, Comstock, Texas(TX)",
       "phone": "432-292-0279",
-      "id": 5
+      "id": 5,
+      "img": "https://th.bing.com/th/id/OIP.vnd4YB8rtPfxYAu9P05cUQHaE8?pid=ImgDet&w=690&h=460&rs=1"
     }
   ]
 }
