@@ -27,7 +27,7 @@ $moreTint: #FDEEDC;
   
   .header {
     position: sticky;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     height: 4em;
     display: flex;
@@ -654,7 +654,9 @@ $moreTint: #FDEEDC;
 .carousel-item-txt {
   height: 100%;
   width: 100%;
-  padding: 0.5em;
+  padding: 2em;
+  text-align: center;
+  word-wrap: break-word;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -777,6 +779,7 @@ $moreTint: #FDEEDC;
     border-radius: 0.5em;
     color: white;
     transition: all 0.3 ease-in;
+    z-index: 999;
   }
 
   // .mobile-nav-btn label:hover {
@@ -812,6 +815,7 @@ $moreTint: #FDEEDC;
   .nav-item.active {
     width: 100vw;
     font-weight: bold;
+    border-radius: 0em;
   }
 
   .nav-item:click {
