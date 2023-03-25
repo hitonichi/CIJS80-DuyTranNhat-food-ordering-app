@@ -638,7 +638,7 @@ $moreTint: #FDEEDC;
 #aboutCarousel,
 #promoCarousel {
   width: 100%;
-  height: 25em;
+  height: 30em;
 }
 
 .carousel-inner {
@@ -704,7 +704,7 @@ $moreTint: #FDEEDC;
   }
 
   .meal-price {
-    text-align: right;
+    // text-align: right;
   }
 
   .meal-description {
@@ -855,9 +855,12 @@ $moreTint: #FDEEDC;
     padding: 0.5em;
   }
 
-  .feedback-react span{
-    display: none;
+  .hori {
+    justify-content: space-around;
   }
 
-
+  .hori button {
+    width: 40%;
+    padding: 0.3em 0.4em;
+  }
 }

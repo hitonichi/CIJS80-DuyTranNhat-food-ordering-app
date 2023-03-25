@@ -11362,7 +11362,7 @@ body::-webkit-scrollbar {
 #aboutCarousel,
 #promoCarousel {
   width: 100%;
-  height: 25em;
+  height: 30em;
 }
 
 .carousel-inner {
@@ -11416,9 +11416,6 @@ body::-webkit-scrollbar {
   .meal-img {
     aspect-ratio: 1;
     align-self: flex-start;
-  }
-  .meal-price {
-    text-align: right;
   }
   .meal-description {
     /* max-height: 1em; */
@@ -11535,8 +11532,12 @@ body::-webkit-scrollbar {
     font-size: 1.5em;
     padding: 0.5em;
   }
-  .feedback-react span {
-    display: none;
+  .hori {
+    justify-content: space-around;
+  }
+  .hori button {
+    width: 40%;
+    padding: 0.3em 0.4em;
   }
 }
 
