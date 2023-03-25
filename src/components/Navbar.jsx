@@ -8,9 +8,9 @@ const Navbar = () => {
             to: "/"
         },
         {
-            title: "About",
+            title: "Menu",
             icon: "",
-            to: "/about"
+            to: "/menu"
         },
         {
             title: "Stores",

@@ -27,13 +27,20 @@ $moreTint: #FDEEDC;
   
   .header {
     position: sticky;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     height: 4em;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1em;
+    background-color: $primary;
+    padding: 0em 10em 0em 3em;
+  }
+
+  .header div:nth-child(2) {
+    // position: absolute;
+    // left: 0;
   }
   
   .title {
@@ -123,18 +130,19 @@ $moreTint: #FDEEDC;
   
   /* ========== Store Page ========== */
   .store-container {
+    width: 70%;
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 10px;
+    padding: 1em;
+    gap: 1em;
   }
   
   .store-card {
     background-color: $gray;
     // border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 12px;
-    margin: 10px;
-    width: 380px;
-    border-radius: 10px;
+    padding: 1em;
+    width: 100%;
+    border-radius: 1em;
     transition: all 0.3s ease;
   }
 
@@ -185,7 +193,7 @@ $moreTint: #FDEEDC;
     margin-top: 25px;
     background-color: $gray;
     width: 720px;
-    padding: 20px 0;
+    padding: 1em 0em;
     border-radius: 10px;
   }
   
@@ -209,7 +217,7 @@ $moreTint: #FDEEDC;
   .feedback-react {
     width: 125px;
     border: 1px solid black;
-    margin: 6px;
+    // margin: 6px;
     border-radius: 6px;
     transition: all .2s ease-in;
   }
@@ -517,94 +525,6 @@ $moreTint: #FDEEDC;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1em;
   }
-  
-  @media only screen and (max-width: 768px) {
-  
-    /* For mobile phones: */
-    .meals-container,
-    .about {
-      width: 95%;
-      margin: 1em;
-    }
-  
-    .Modal-content {
-      width: 95%;
-    }
-  
-    .order-form {
-      overflow: initial;
-    }
-  
-    .meal-img {
-      aspect-ratio: 1;
-      align-self: flex-start;
-    }
-  
-    .meal-price {
-      text-align: right;
-    }
-  
-    .meal-description {
-      /* max-height: 1em; */
-      /* overflow:visible; */
-      order: 3;
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-  
-    .meal-info {
-      align-self: self-start;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-start: 2;
-      grid-column-end: 4;
-    }
-  
-    .order-nav {
-      justify-content: space-around;
-    }
-  
-    .order-nav button {
-      width: 40%;
-    }
-  
-    .add-meal-form {
-      grid-column-start: 1;
-      grid-column-end: 4;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      gap: 0.5em;
-    }
-  
-    .add-meal-form-btn {
-      margin: 0;
-      width: 40%;
-    }
-  
-    .add-meal-form-body {
-      width: 50%;
-    }
-  
-    .to-top-btn {
-      position: fixed;
-      top: auto;
-      bottom: 0;
-      right: 0;
-      transform: none;
-      margin: 0.5em;
-    }
-  
-    .contacts {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-.header {
-    background-color: $primary;
-    padding: 0em 10em;
-    // z-index: 999;
-}
 
 .title {
     color: white;
@@ -638,16 +558,20 @@ $moreTint: #FDEEDC;
 
 #cart-btn {
     display: flex;
-    gap: 2em;
+    gap: 0.5em;
+    align-items: center;
+    font-weight: bold;
     background-color: $darkprimary;
     color: white;
-    padding: 0.5em 2em;
-    transition: .3s ease;
+    padding: 0.5em 0.9em 0.5em 1em;
+    transition: .3s ease-in;
+    border-radius: 0.5em;
 }
 
 #cart-btn:hover {
     color: white;
     background-color: $shade;
+    cursor: pointer;
 }
 
 .cart-btn-animate {
@@ -704,17 +628,236 @@ $moreTint: #FDEEDC;
     color: white;
 }
 
+// ================Mobile Nav===============
+.mobile-nav-btn input,
+.mobile-nav-btn label,
+.mobile-navbar {
+  display: none;
+}
+
+#aboutCarousel,
+#promoCarousel {
+  width: 100%;
+  height: 25em;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  position: relative;
+  height: 100%;
+  color: white;
+}
+
+.carousel-item-txt {
+  height: 100%;
+  width: 100%;
+  padding: 2em;
+  text-align: center;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 768px) {
-/* For mobile phones: */
-    .header {
-        padding: 1em;
-    }
+  
+  /* For mobile phones: */
 
-    .order-input input {
-        width: 100%;
-    }
+  .header {
+    padding: 1em;
+    justify-content: start;
+    gap: 0.5em;
+  }
+  
+  .cart-container {
+    margin-left: auto;
+  }
 
-    .addToCart-btn {
-        width: 100%;
-      }
+  .order-input input {
+    width: 100%;
+  }
+
+  .addToCart-btn {
+    width: 100%;
+  }
+  
+  .meals-container,
+  .about {
+    width: 95%;
+    margin: 1em;
+  }
+
+  .Modal-content {
+    width: 95%;
+  }
+
+  .order-form {
+    overflow: initial;
+  }
+
+  .meal-img {
+    aspect-ratio: 1;
+    align-self: flex-start;
+  }
+
+  .meal-price {
+    text-align: right;
+  }
+
+  .meal-description {
+    /* max-height: 1em; */
+    /* overflow:visible; */
+    order: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .meal-info {
+    align-self: self-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .order-nav {
+    justify-content: space-around;
+  }
+
+  .order-nav button {
+    width: 40%;
+  }
+
+  .add-meal-form {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.5em;
+  }
+
+  .add-meal-form-btn {
+    margin: 0;
+    width: 40%;
+  }
+
+  .add-meal-form-body {
+    width: 50%;
+  }
+
+  .to-top-btn {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    transform: none;
+    margin: 1em;
+  }
+
+  .contacts {
+    grid-template-columns: 45% 45%;
+    word-wrap: break-word;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  #cart-btn div:nth-child(2) {
+    display: none;
+    background-color: red;
+  }
+
+  .mobile-nav-btn label {
+    display: block;
+    background-color: $darkprimary;
+    padding: 0.5em 0.8em;
+    border-radius: 0.5em;
+    color: white;
+    transition: all 0.3 ease-in;
+    z-index: 999;
+  }
+
+  // .mobile-nav-btn label:hover {
+  //   background-color: $shade;
+  // }
+  
+  .mobile-navbar {
+    display: none;
+    position: fixed;
+    top: 4em;
+    left: 0em;
+    z-index: 20;
+    width: 100vw;
+    height: 100%;
+    background-color: $shade;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    transition: all 0.3 ease-in;
+  }
+
+  #nav-check:checked ~ .mobile-navbar {
+    // left: 0px;
+    display: flex;
+    // background-color: red!IMPORTANT;
+  }
+  
+  .nav-item {
+    height: fit-content;
+    display: block;
+  }
+
+  .nav-item.active {
+    width: 100vw;
+    font-weight: bold;
+    border-radius: 0em;
+  }
+
+  .nav-item:click {
+
+  }
+
+  .about-page-container {
+    width: 90%;
+  }
+
+  .store-container {
+    // width:;
+    grid-template-columns: 1fr;
+    width: 95%;
+    padding: 0.5em 0em;
+  }
+
+  .feedback-form {
+    width: 90%;
+  }
+
+  .feedback-reactions {
+    font-size: 1em;
+    // grid-template-columns: repeat(5, minmax(0, 1fr));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    overflow: scroll;
+  }
+
+  .feedback-react {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+
+  .feedback-react span{
+    display: none;
+  }
+
+
 }

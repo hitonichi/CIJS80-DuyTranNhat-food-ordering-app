@@ -33,7 +33,7 @@ const Footer = () => {
                 </div>
             </div>
             <a href="#" className="to-top-btn"><i className="fa-solid fa-arrow-up"></i></a>
-            <div className="">&#169; Food Ordering Website 2023 by <span className="text-danger">Duy & Thuan</span></div>
+            <div className="">&#169; Food Ordering Website 2023 by <span className="text-danger fst-italic">Duy & Thuan</span></div>
         </div>
     )
 }
